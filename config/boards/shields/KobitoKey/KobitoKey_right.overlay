@@ -40,18 +40,16 @@
     };
 };
 
-/* 右側がセントラルなので、両方のリスナーを有効化 */
+/* 右側がセントラルなので、必要な論理ノードを有効化 */
 &tb_right_listener {
     status = "okay";
     device = <&tb_right>;
-
     input-processors = <&sensor_rotation_right>;
 };
 
 &tb_left_listener {
     status = "okay";
-    device = <&tb_split>; /* 左（周辺）からの入力を受ける */
-
+    device = <&tb_split>; /* 左（周辺）からの無線データを受ける */
     input-processors =
             <&sensor_rotation_left>,
             <&zip_x_scaler 1 15>,
@@ -60,3 +58,7 @@
             <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>,
             <&zip_scroll_transform INPUT_TRANSFORM_X_INVERT>;
 };
+
+&sensor_rotation_left { status = "okay"; };
+&sensor_rotation_right { status = "okay"; };
+&zip_temp_layer { status = "okay"; };

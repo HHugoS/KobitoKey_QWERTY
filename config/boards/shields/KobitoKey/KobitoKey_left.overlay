@@ -41,11 +41,8 @@
     };
 };
 
-/* 左側はペリフェラルなのでリスナーは無効 */
-&tb_left_listener {
-    status = "disabled";
-};
-
-&tb_right_listener {
-    status = "disabled";
+/* 重要：子機側で tb_split を有効にし、ハードウェア・デバイスを紐付ける */
+&tb_split {
+    status = "okay";
+    device = <&tb_left>;
 };
