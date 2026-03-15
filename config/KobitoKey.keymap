@@ -2,7 +2,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/pointing.h>
 
 / {
     combos {
@@ -41,29 +40,19 @@
 &kp Q  &kp W  &kp E                       &kp R               &kp T         &kp Y     &kp U        &kp I      &kp O  &kp P
 &kp A  &kp S  &kp D                       &kp F               &kp G         &kp H     &kp J        &kp K      &kp L  &none
 &none  &kp Z  &kp X                       &kp C               &kp V         &kp B     &kp N        &kp M      &none  &none
-&none  &none  &mt LEFT_CONTROL LS(SPACE)  &mt LEFT_SHIFT TAB  &lt 1 RETURN  &kp BSPC  &lt 3 ENTER  &kp RSHFT  &none  &none
+&none  &none  &mt LEFT_CONTROL LS(SPACE)  &mt LEFT_SHIFT TAB  &lt 3 RETURN  &kp BSPC  &lt 2 ENTER  &kp RSHFT  &none  &none
             >;
 
             label = "Character";
         };
 
         Symbol {
-            label = "EN";
-            bindings = <
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp F1   &kp F2   &kp F3  &kp F4  &kp F5
-&trans        &trans        &trans        &trans        &bt BT_CLR      &kp F6   &kp F7   &kp F8  &kp F9  &kp F10
-&trans        &trans        &trans        &trans        &bt BT_CLR_ALL  &kp F11  &kp F12  &trans  &trans  &trans
-&trans        &trans        &trans        &trans        &trans          &kp DEL  &trans   &trans  &trans  &trans
-            >;
-        };
-
-        Symbol {
             label = "JP";
             bindings = <
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp F1   &kp F2   &kp F3  &kp F4  &kp F5
-&trans        &trans        &trans        &trans        &bt BT_CLR      &kp F6   &kp F7   &kp F8  &kp F9  &kp F10
-&trans        &trans        &trans        &trans        &bt BT_CLR_ALL  &kp F11  &kp F12  &trans  &trans  &trans
-&trans        &trans        &trans        &trans        &trans          &kp DEL  &trans   &trans  &trans  &trans
+&kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)  &kp LS(NUMBER_6)  &kp LS(NUMBER_7)   &kp LS(NUMBER_8)  &kp LS(NUMBER_9)  &kp LS(NUMBER_0)
+&kp GRAVE         &kp COMMA         &kp BACKSLASH     &kp LEFT_BRACKET  &kp MINUS         &kp EQUAL         &kp RIGHT_BRACKET  &kp SLASH         &kp PERIOD        &kp SINGLE_QUOTE
+&kp TILDE         &kp LESS_THAN     &kp PIPE          &kp LEFT_BRACE    &kp UNDERSCORE    &kp PLUS          &kp RIGHT_BRACE    &kp QUESTION      &kp GREATER_THAN  &kp DOUBLE_QUOTES
+&trans            &trans            &trans            &trans            &trans            &kp DEL           &trans             &trans            &kp SEMICOLON     &kp COLON
             >;
         };
 
@@ -78,12 +67,12 @@
         };
 
         Mouse {
-            label = "Mouse";
+            label = "mouse";
             bindings = <
-&trans     &trans  &trans    &trans    &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans     &trans  &trans    &trans    &trans  &trans  &trans    &trans    &trans    &trans
-&trans     &trans  &trans    &trans    &trans  &trans  &trans    &trans    &trans    &trans
-&kp LSHFT  &trans  &kp LCMD  &kp LALT  &to 0   &trans  &trans    &trans    &to 0     &kp RALT
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp F1   &kp F2   &kp F3  &kp F4  &kp F5
+&trans        &trans        &trans        &trans        &bt BT_CLR      &kp F6   &kp F7   &kp F8  &kp F9  &kp F10
+&trans        &trans        &trans        &trans        &bt BT_CLR_ALL  &kp F11  &kp F12  &trans  &trans  &trans
+&trans        &trans        &trans        &trans        &trans          &kp DEL  &trans   &trans  &trans  &trans
             >;
         };
     };
