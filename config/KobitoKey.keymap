@@ -23,10 +23,10 @@
 
         Character {
             bindings = <
-&kp Q           &kp W           &kp E                       &kp R               &kp T         &kp Y        &kp U         &kp I         &kp O  &kp P
-&kp A           &kp S           &kp D                       &kp F               &kp G         &kp H        &kp J         &kp K         &kp L  &Delete_Backspace
-&none           &kp Z           &kp X                       &kp C               &kp V         &kp B        &kp N         &kp M         &none  &mo 3
-&kp LANGUAGE_1  &kp LANGUAGE_2  &mt LEFT_CONTROL LS(SPACE)  &mt LEFT_SHIFT TAB  &lt 1 RETURN  &lt 2 SPACE  &kp LEFT_ALT  &kp LEFT_GUI  &none  &none
+&kp Q           &kp W           &kp E             &kp R               &kp T         &kp Y        &kp U         &kp I         &kp O  &kp P
+&kp A           &kp S           &kp D             &kp F               &kp G         &kp H        &kp J         &kp K         &kp L  &mo 3
+&none           &kp Z           &kp X             &kp C               &kp V         &kp B        &kp N         &kp M         &none  &Delete_Backspace
+&kp LANGUAGE_1  &kp LANGUAGE_2  &kp LEFT_CONTROL  &mt LEFT_SHIFT TAB  &lt 1 RETURN  &lt 2 SPACE  &kp LEFT_ALT  &kp LEFT_GUI  &none  &none
             >;
 
             label = "Character";
@@ -45,10 +45,10 @@
         Number {
             label = "NUMBER";
             bindings = <
-&kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PLUS      &kp MINUS  &kp F1   &kp F2   &kp F3  &kp F4  &kp F5
-&kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK  &kp SLASH  &kp F6   &kp F7   &kp F8  &kp F9  &kp F10
-&kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp DOT       &kp COMMA  &kp F11  &kp F12  &none   &none   &none
-&kp NUMBER_0     &kp EQUAL        &none            &none         &none      &none    &none    &none   &none   &none
+&kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PLUS      &kp MINUS  &kp F1   &kp F2   &kp F3      &kp F4  &kp F5
+&kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK  &kp SLASH  &kp F6   &kp F7   &kp F8      &kp F9  &kp F10
+&kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp DOT       &kp COMMA  &kp F11  &kp F12  &none       &none   &none
+&kp NUMBER_0     &kp EQUAL        &none            &none         &none      &none    &none    &kp ESCAPE  &none   &none
             >;
         };
 
