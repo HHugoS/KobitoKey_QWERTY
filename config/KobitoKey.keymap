@@ -37,10 +37,10 @@
 
         Character {
             bindings = <
-&kp Q  &kp W  &kp E                       &kp R               &kp T         &kp Y     &kp U        &kp I      &kp O  &kp P
-&kp A  &kp S  &kp D                       &kp F               &kp G         &kp H     &kp J        &kp K      &kp L  &none
-&none  &kp Z  &kp X                       &kp C               &kp V         &kp B     &kp N        &kp M      &none  &none
-&none  &none  &mt LEFT_CONTROL LS(SPACE)  &mt LEFT_SHIFT TAB  &lt 3 RETURN  &kp BSPC  &lt 2 ENTER  &kp RSHFT  &none  &none
+&kp Q  &kp W  &kp E                       &kp R               &kp T         &kp Y        &kp U         &kp I         &kp O  &kp P
+&kp A  &kp S  &kp D                       &kp F               &kp G         &kp H        &kp J         &kp K         &kp L  &none
+&none  &kp Z  &kp X                       &kp C               &kp V         &kp B        &kp N         &kp M         &none  &none
+&none  &none  &mt LEFT_CONTROL LS(SPACE)  &mt LEFT_SHIFT TAB  &lt 1 RETURN  &lt 2 SPACE  &kp LEFT_ALT  &kp LEFT_GUI  &none  &none
             >;
 
             label = "Character";
@@ -52,7 +52,7 @@
 &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(NUMBER_5)  &kp LS(NUMBER_6)  &kp LS(NUMBER_7)   &kp LS(NUMBER_8)  &kp LS(NUMBER_9)  &kp LS(NUMBER_0)
 &kp GRAVE         &kp COMMA         &kp BACKSLASH     &kp LEFT_BRACKET  &kp MINUS         &kp EQUAL         &kp RIGHT_BRACKET  &kp SLASH         &kp PERIOD        &kp SINGLE_QUOTE
 &kp TILDE         &kp LESS_THAN     &kp PIPE          &kp LEFT_BRACE    &kp UNDERSCORE    &kp PLUS          &kp RIGHT_BRACE    &kp QUESTION      &kp GREATER_THAN  &kp DOUBLE_QUOTES
-&trans            &trans            &trans            &trans            &trans            &kp DEL           &trans             &trans            &kp SEMICOLON     &kp COLON
+&trans            &trans            &trans            &trans            &trans            &none             &trans             &trans            &kp SEMICOLON     &kp COLON
             >;
         };
 
