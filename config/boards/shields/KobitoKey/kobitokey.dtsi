@@ -43,6 +43,11 @@
             compatible = "zmk,input-split";
             reg = <0>;
         };
+
+        tb_left_split: tb_left_split@1 {
+            compatible = "zmk,input-split";
+            reg = <1>;
+        };
     };
 
     /* リスナー（中央で有効化。周辺から来た入力もここで処理） */
