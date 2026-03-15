@@ -36,56 +36,6 @@
             RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4)   RC(3,5) RC(3,6) RC(3,7) RC(3,8) RC(3,9)
         >;
     };
-
-    /* リモート側（周辺側）からの入力を受けるため、または送るための定義 */
-    split_inputs {
-        #address-cells = <1>;
-        #size-cells = <0>;
-
-        tb_split: tb_split@0 {
-            compatible = "zmk,input-split";
-            reg = <0>;
-            status = "disabled";
-        };
-    };
-
-    /* リスナー：重要 - デフォルトで disabled にし、Centralのみ okay にする */
-    tb_left_listener: tb_left_listener {
-        compatible = "zmk,input-listener";
-        status = "disabled";
-    };
-
-    tb_right_listener: tb_right_listener {
-        compatible = "zmk,input-listener";
-        status = "disabled";
-    };
-
-    /* トラックボールの回転補正 - デフォルトで okay だが、参照が各 overlay にある */
-    sensor_rotation_left: sensor-rotation-left {
-        compatible = "zmk,input-processor-sensor-rotation";
-        status = "disabled";
-        #input-processor-cells = <0>;
-        rotation-angle = <(-24)>;
-    };
-
-    sensor_rotation_right: sensor-rotation-right {
-        compatible = "zmk,input-processor-sensor-rotation";
-        #input-processor-cells = <0>;
-        status = "disabled";
-        rotation-angle = <24>;
-    };
-
-    /* オートマウスレイヤー用プロセッサ */
-    /omit-if-no-ref/ zip_temp_layer: zip_temp_layer {
-        compatible = "zmk,input-processor-temp-layer";
-        #input-processor-cells = <2>;
-        require-prior-idle-ms = <350>;
-        status = "disabled";
-    };
-};
-
-&zip_temp_layer {
-    excluded-positions = <6 7 8 30 32 33 39>;
 };
 
 / {

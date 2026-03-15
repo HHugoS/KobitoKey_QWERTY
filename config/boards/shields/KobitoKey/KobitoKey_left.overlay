@@ -41,8 +41,15 @@
     };
 };
 
-/* 重要：子機側で tb_split を有効にし、ハードウェア・デバイスを紐付ける */
-&tb_split {
-    status = "okay";
-    device = <&tb_left>;
+/ {
+    split_inputs {
+        #address-cells = <1>;
+        #size-cells = <0>;
+
+        tb_split: tb_split@0 {
+            compatible = "zmk,input-split";
+            reg = <0>;
+            device = <&tb_left>;
+        };
+    };
 };
