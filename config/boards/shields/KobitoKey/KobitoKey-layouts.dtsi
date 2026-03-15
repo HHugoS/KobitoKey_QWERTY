@@ -5,6 +5,8 @@
     kobitokey_layout: physical_layout_0 {
         compatible = "zmk,physical-layout";
         display-name = "KobitoKey Default";
+        kscan = <&kscan0>;
+        transform = <&default_transform>;
 
         /* 必須：キー位置。順番は keymap のバインディング順と一致させる */
         /* ここでは 4行×10列（=合計40キー）を 1u グリッドで仮定 */
