@@ -1,6 +1,5 @@
 #include <zephyr/dt-bindings/pinctrl/nrf-pinctrl.h>
 #include "kobitokey.dtsi"
-#include <input/processors.dtsi>
 
 /* 列オフセット */
 &default_transform { col-offset = <5>; };
@@ -41,17 +40,17 @@
     };
 };
 
+/* 右側がセントラルなので、両方のリスナーを有効化 */
 &tb_right_listener {
     status = "okay";
     device = <&tb_right>;
 
-    input-processors =
-        <&sensor_rotation_right>;
+    input-processors = <&sensor_rotation_right>;
 };
 
 &tb_left_listener {
     status = "okay";
-    device = <&tb_left_split>;
+    device = <&tb_split>; /* 左（周辺）からの入力を受ける */
 
     input-processors =
             <&sensor_rotation_left>,
