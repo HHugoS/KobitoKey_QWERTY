@@ -6,3 +6,4 @@ url: https://github.com/juichi50iii/zmk-config-Kobitokey
 requires: [seeeduino_xiao_ble]
 features:
   - keys
+  - pointing

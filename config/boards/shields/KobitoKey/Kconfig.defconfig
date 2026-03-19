@@ -1,15 +1,33 @@
-# 左（central）
-if SHIELD_KOBITOKEY_LEFT
+if SHIELD_KOBITOKEY_LEFT || SHIELD_KOBITOKEY_RIGHT
+
 config ZMK_KEYBOARD_NAME
     default "KobitoKey"
-endif
 
-# 左右共通
-if SHIELD_KOBITOKEY_LEFT || SHIELD_KOBITOKEY_RIGHT
 config ZMK_SPLIT
     default y
+
 config ZMK_POINTING
     default y
+
+config ZMK_MOUSE
+    default y
+
 config SPI
     default y
+
+config INPUT
+    default y
+
+config PMW3610
+    default y
+
+config ZMK_BLE
+    default y
+
+config ZMK_BATTERY_REPORTING
+    default y
+
+config NFCT_PINS_AS_GPIOS
+    default y
+
 endif
