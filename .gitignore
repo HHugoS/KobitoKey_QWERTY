@@ -1,0 +1,14 @@
+# ZMK build artifacts
+build/
+.west/
+zephyr/
+*.uf2
+*.bin
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Editor specific files
+.vscode/
+.idea/
