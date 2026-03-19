@@ -12,3 +12,8 @@ Thumbs.db
 # Editor specific files
 .vscode/
 .idea/
+
+# GitHub account mapping (local only)
+.gh-account
+.gh-token
+
